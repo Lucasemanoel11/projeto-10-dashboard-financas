@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Finanças e Despesas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel-financeiro">
+    <h1>Dashboard de Finanças</h1>
+    <p class="subtitulo-painel">Registo de entradas e gastos com violino, leituras em francês e cadernos.</p>
+
+    <section class="resumo-contabil">
+      <article class="cartao-resumo">
+        <h2>Entradas</h2>
+        <p id="total-entradas" class="valor-resumo entrada">0,00 €</p>
+      </article>
+
+      <article class="cartao-resumo">
+        <h2>Saídas</h2>
+        <p id="total-saidas" class="valor-resumo saida">0,00 €</p>
+      </article>
+
+      <article class="cartao-resumo">
+        <h2>Saldo Líquido</h2>
+        <p id="saldo-liquido" class="valor-resumo saldo">0,00 €</p>
+      </article>
+    </section>
+
+    <div class="barra-filtros">
+      <button type="button" class="botao-filtro ativo" data-filtro="todas">Todas</button>
+      <button type="button" class="botao-filtro" data-filtro="receita">Receitas</button>
+      <button type="button" class="botao-filtro" data-filtro="despesa">Despesas</button>
+    </div>
+
+    <table class="tabela-transacoes">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Tipo</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela"></tbody>
+    </table>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
